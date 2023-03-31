@@ -1,0 +1,116 @@
+// // // // // //create a basic api
+
+
+// // // // // const http = require("http");
+// // // // // const data = require("../data.js");
+// // // // // http.createServer((request, response) => {
+// // // // //     response.writeHead(201, { 'contect-Type': 'json' })
+
+// // // // //     response.write(JSON.stringify(data));
+// // // // //     response.end();
+// // // // // }).listen(2000);
+
+
+// // // // // //for add and remove directly in comond prompt
+
+
+// // // // // // console.log(process.argv[3]);
+// // // // // // const fs = require("fs");
+// // // // // // const input = process.argv;
+
+
+// // // // //MAKE A FILE
+
+// // // // // const fs = require('fs');
+// // // // // const path = require('path');
+// // // // // const dirPath = path.join(__dirname, "CRUD");
+// // // // // const filePath = `${dirPath}/animal.txt`;
+
+// // // // // fs.writeFileSync(filePath, "This is a animal file");
+
+
+// // // // const fs = require('fs');
+// // // // const path = require('path');
+// // // // const dirPath= path.join("../","public",'crud');
+// // // // const filePath = `${dirPath}/apple.txt`;
+// // // // fs.unlinkSync(`${dirPath}/fruit.txt`);
+
+
+// // // const fs = require('fs');
+// // // const path = require('path');
+// // // const dirPath = path.join(__dirname,"Files");
+// // // console.warn(dirPath);
+// // // // for (i = 0; i < 5; i++) {
+// // // //     fs.writeFileSync(dirPath +"/apple" +i+".txt", "Apple file");
+// // // // }
+// // // fs.readdir(dirPath, (err, Files) => {
+// // //     Files.forEach((items) => {
+// // //         console.warn("File name is :"+items);
+// // //     })
+// // // })
+
+
+// // // CRUD APPLICATION....................................................
+
+
+
+// // const fs = require('fs');
+// // const path = require('path');
+// // const dirPath= path.join(__dirname,'CRUD');
+// // const filePath = `${dirPath}/apple.txt`;
+// // // fs.writeFileSync(filePath,'this is a simple file');// Create
+// // // fs.readFile(filePath,'utf8',(err,item)=>{
+// // // console.log(item);
+// // // })  // Reading.......................................................
+
+
+// // // Update................................................................
+// // fs.appendFile(filePath, "and file name is apple.txt", (err) => {
+// //     if (!err) {
+// //         console.warn("File is updated");
+// //     }
+// // });
+
+// // // Delete ..........................................................
+
+// // // fs.unlinkSync(`${dirPath}/apple.txt`)
+
+
+
+
+// const express = require("express");
+// const app = express();
+// app.get("", (request, responce) => {
+//     responce.send("Welcome" + request.query.name);
+// })
+// app.get("/contact", (request, responce) => {
+//     responce.send(`<h1>Welcome to Contact us page</h1><a href="/about">Go to About page</a >`);
+// })
+// app.get("/about", (request, responce) => {
+//     responce.send(`
+//     <input type="text" placeholder="Enter name"/>
+//     `);
+// })
+// app.get("/help", (request, responce) => {
+//     responce.send("Hello Help page");
+// })
+// app.listen(5000);
+
+
+// const express = require("express");
+// const path = require("path");
+// const app = express();
+// const publicPath = path.join(__dirname, 'public');
+// // console.warn(publicPath); PUBLIC TAK KA PATH.........
+
+// app.use(express.static(publicPath));
+
+// HTML RENDER ON NODE JS ///////////////////////////////////
+// const express = require("express");
+// const path = require("path");
+// const app = express();
+// const publicPath = path.join(__dirname, 'public');
+
+// app.use(express.static(publicPath));
+// app.listen(3000);
+
